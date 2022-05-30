@@ -16,5 +16,36 @@ class Hitbox {
     return ((this.isTouchingPoint(other.x1, other.y1)) || (this.isTouchingPoint(other.x1, other.y2))
             || (this.isTouchingPoint(other.x2, other.y1)) || (this.isTouchingPoint(other.x2, other.y2)));
   }
+  
+  move(x, y) {
+    this.x1 += x;
+    this.x2 += x;
+    this.y1 += y;
+    this.y2 += y;
+  }
 }
     
+
+class PolarBear {
+  constructor(hitbox) {
+    this.hitbox = hitbox;
+    this.energy = 100;
+    this.holdingSeal = false;
+    this.onIceberg = true;
+  }
+}
+
+class Iceberg {
+  constructor(hitbox, time) {
+    this.hitbox = hitbox;
+    this.time = time;
+  }
+}
+
+class Seal {
+  constructor(hitbox) {
+    this.hitbox = hitbox;
+    this.movingRight = true;
+    this.wanderDistanceRemaining = 50;
+  }
+}
