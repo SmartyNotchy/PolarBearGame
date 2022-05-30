@@ -33,12 +33,36 @@ class PolarBear {
     this.holdingSeal = false;
     this.onIceberg = true;
   }
+  
+  boardIceberg(iceberg) {
+  
+  }
+  
+  leaveIceberg(iceberg) {
+    
+  }
+  
+  update() {
+   
+  }
+  
+  draw(ctx, cameraX) {
+    
+  }
 }
 
 class Iceberg {
   constructor(hitbox, time) {
     this.hitbox = hitbox;
     this.time = time;
+  }
+  
+  update() {
+    
+  }
+  
+  draw(ctx, cameraX) {
+    
   }
 }
 
@@ -47,5 +71,13 @@ class Seal {
     this.hitbox = hitbox;
     this.movingRight = true;
     this.wanderDistanceRemaining = 50;
+  }
+  
+  update() {
+    
+  }
+  
+  draw(ctx, cameraX) {
+    
   }
 }
